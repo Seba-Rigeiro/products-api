@@ -23,7 +23,7 @@ export class ProductsService {
     }));
   }
 
-  async findOne(id: number): Promise<Product> {
+  async findOne(id: string): Promise<Product> {
     const { data } = await axios.get<Product>(`${this.FAKESTORE_URL}/${id}`);
     return { ...data, stock: Math.floor(Math.random() * 100) };
   }

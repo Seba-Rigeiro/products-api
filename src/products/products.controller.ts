@@ -28,7 +28,7 @@ export class ProductsController {
   @Get(':id')
   @ApiOperation({ summary: 'Get a product by id' })
   @ApiResponse({ status: 200, description: 'Product detail' })
-  findOne(@Param('id') id: number): Promise<Product> {
+  findOne(@Param('id') id: string): Promise<Product> {
     return this.productsService.findOne(id);
   }
 

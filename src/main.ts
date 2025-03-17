@@ -7,7 +7,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Products API')
-    .setDescription('API para gestionar productos con FakeStore y PostgreSQL')
+    .setDescription('API to manage products')
     .setVersion('1.0')
     .build();
 
