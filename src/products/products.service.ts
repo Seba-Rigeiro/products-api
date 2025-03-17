@@ -38,7 +38,7 @@ export class ProductsService {
   }
 
   async updateStock(
-    id: number,
+    id: string,
     updateStockDto: UpdateStockDto,
   ): Promise<Product> {
     const product = await this.productRepository.findOne({ where: { id } });
@@ -51,7 +51,7 @@ export class ProductsService {
     return this.productRepository.save(product);
   }
 
-  async delete(id: number): Promise<void> {
+  async delete(id: string): Promise<void> {
     const result = await this.productRepository.delete(id);
     if (result.affected === 0)
       throw new NotFoundException('Producto no encontrado');

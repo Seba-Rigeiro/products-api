@@ -3,7 +3,7 @@ import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 @Entity()
 export class Product {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @Column()
   title: string;
